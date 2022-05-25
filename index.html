@@ -50,36 +50,32 @@
         <div class="slider-ice-current">
           <h3 class="slider-ice-name-">Нежный пломбир с клубничным джемом</h3>
           <p class="slider-ice-description">Натуральное мороженое из свежих сливок и молока с вкуснейшим клубничным джемом – это идеальный десерт для всей семьи.</p>
+          <a href="#" class="button">Заказать</a>
         </div>
         <div class="slider-ice-current visually-hidden">
           <h3 class="slider-ice-name">Сливочное мороженое со вкусом банана</h3>
           <p class="slider-ice-description">Сливочное мороженое с ярким банановым вкусом подарит вам свежесть и наслаждение даже в самый жаркий летний день.</p>
+          <a href="#" class="button">Заказать</a>
         </div>
         <div class="slider-ice-current visually-hidden">
           <h3 class="slider-ice-name">Карамельный пломбир с маршмеллоу</h3>
           <p class="slider-ice-description">Необычный сладкий десерт с карамельным топпингом и кусочками зефира завоюет сердца сладкоежек всех возрастов.</p>
+          <a href="#" class="button">Заказать</a>
         </div>
-        <a href="#" class="button">Заказать</a>
         <ul class="slider-pages">
           <li class="slider-pages-current">
-            <span class="visually-hidden">1</span>
+            <button class="slider-pages-current-button"></button>
           </li>
           <li class="slider-pages-next">
-            <span class="visually-hidden">2</span>
+            <button class="slider-pages-next-button"></button>
           </li>
           <li class="slider-pages-next">
-            <span class="visually-hidden">3</span>
+            <button class="slider-pages-next-button"></button>
           </li>
         </ul>
         <ul class="slider-ice-items">
-          <li class="slider-ice-main">
-            <button type="button" class="arrow-previous">
-              <span class="visually-hidden">Предыдущее мороженное</span>
-            </button>
-            <img class="slider-ice-current-img" src="#" alt="Нежный пломбир с клубничным джемом">
-            <button type="button" class="arrow-next">
-              <span class="visually-hidden">Следующее мороженное</span>
-            </button>
+          <li class="slider-ice-main">            
+            <img class="slider-ice-current-img" src="#" alt="Нежный пломбир с клубничным джемом">            
           </li>
           <li class="slider-ice-next">
             <img class="slider-ice-next-img" src="#" alt="Следующее мороженное">
@@ -88,6 +84,12 @@
             <img class="slider-ice-next-img" src="#" alt="Следующее мороженное">
           </li>
         </ul>
+        <button type="button" class="arrow-previous">
+          <span class="visually-hidden">Предыдущее мороженное</span>
+        </button>
+        <button type="button" class="arrow-next">
+          <span class="visually-hidden">Следующее мороженное</span>
+        </button>
         <ul class="slider-social">
           <li class="social-items">
             <a href="https://t.me/htmlacademy" class="social-button">
@@ -220,7 +222,7 @@
         <p class="address-tel-title">Для заказов по телефону:</p>
         <p class="adress-tel-info">+7 (812) 812-12-12</p>
         <p class="adress-tel-time">(с 10 до 20 ежедневно)</p>
-        <input type="button" value="Форма обратной связи">
+        <button type="button">Форма обратной связи</button>
       </section>
     </main>
     <footer class="page-footer">
