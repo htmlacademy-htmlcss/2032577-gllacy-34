@@ -453,6 +453,16 @@ body {
     color: inherit;
 }
 
+.breadcrumbs {
+    list-style: none;
+    display: flex;
+    padding: 0;
+}
+
+.breadcrumbs-item {
+    margin-right: 28px;
+}
+
 .breadcrumbs-link {
     font-weight: 700;
     font-size: 14px;
@@ -479,6 +489,15 @@ body {
     line-height: 20px;
 }
 
+.select-control {
+    width: 196px;
+    height: 36px;
+    background-color: #FCFCFC;
+    opacity: 0.3;
+    border-radius: 20px;
+    color: #2D3440;  
+}
+
 .filtres .button {
     font-weight: 700;
     font-size: 14px;
@@ -488,6 +507,35 @@ body {
     background: rgba(252, 252, 252, 0.3);
     border: 2px solid #FCFCFC;
     border-radius: 20px;
+}
+
+.filtres {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.sort-container {
+    display: flex;
+    flex-direction: column;
+    margin-right: 24px;
+}
+
+.catalog-filter-group {
+    display: flex;
+    height: 40px;
+    align-items: center;
+    align-content: flex-start;
+    padding: 10px 24px;
+    box-sizing: border-box;
+}
+
+.catalog-filter-list {
+    display: flex;
+    list-style: none;
+}
+
+.catalog-filter-item {
+    margin-right: 16px;
 }
 
 .product-card-image {
