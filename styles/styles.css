@@ -506,6 +506,8 @@ body {
     font-size: 14px;
     line-height: 20px;
     width: 823px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .first-filter-container {
@@ -548,19 +550,28 @@ body {
     display: flex;
     height: 40px;
     align-items: center;
-    align-content: flex-start;
     padding: 0;
     box-sizing: border-box;
+    max-width: 604px;
+    border: none;
 }
 
 .catalog-filter-list {
     display: flex;
     list-style: none;
-    width: auto;
+    width: 604px;
+    padding: 9px 24px;
+    background-color: rgba(252, 252, 252, 0.3);
+    border-radius: 18px;;
+    margin: 8px 0;
 }
 
 .catalog-filter-item {
     margin-right: 16px;
+}
+
+.catalog-filter-title {
+    margin: 8px 0;
 }
 
 .product-list {
