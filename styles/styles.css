@@ -185,6 +185,24 @@ body {
     display: flex;
     justify-content: space-between;
     list-style: none;
+    align-items: center;
+    padding: 0;
+    margin-top: 44px;
+}
+
+.popular-item {
+    width: 270px;
+    background-color: #FCFCFC;
+    border-radius: 8px;
+    margin-right: 30px;
+    margin-bottom: 40px;
+    padding: 0 40px 24px 40px;
+    box-sizing: border-box;
+    text-align: center;   
+}
+
+.popular-item:nth-child(4n) {
+    margin-right: 0;
 }
 
 .popular-item-name {
@@ -487,6 +505,17 @@ body {
 .filtres {
     font-size: 14px;
     line-height: 20px;
+    width: 823px;
+}
+
+.first-filter-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.second-filter-container {
+    display: flex;
+    justify-content: space-between;
 }
 
 .select-control {
@@ -509,11 +538,6 @@ body {
     border-radius: 20px;
 }
 
-.filtres {
-    display: flex;
-    flex-wrap: wrap;
-}
-
 .sort-container {
     display: flex;
     flex-direction: column;
@@ -525,17 +549,42 @@ body {
     height: 40px;
     align-items: center;
     align-content: flex-start;
-    padding: 10px 24px;
+    padding: 0;
     box-sizing: border-box;
 }
 
 .catalog-filter-list {
     display: flex;
     list-style: none;
+    width: auto;
 }
 
 .catalog-filter-item {
     margin-right: 16px;
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    align-items: center;
+    padding: 0;
+    margin-top: 44px;
+}
+
+.product-card {
+    width: 270px;
+    background-color: #FCFCFC;
+    border-radius: 8px;
+    margin-right: 30px;
+    margin-bottom: 40px;
+    padding: 0 40px 24px 40px;
+    box-sizing: border-box;
+    text-align: center;    
+}
+
+.product-card:nth-child(4n) {
+    margin-right: 0;
 }
 
 .product-card-image {
@@ -561,6 +610,27 @@ body {
     line-height: 24px;
 }
 
+.empty-block {
+    width: 152px;
+}
+
+.pagination-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.pagination {
+    display: flex;
+    list-style: none;
+    padding: 0 8px;
+    width: 168px;
+    box-sizing: border-box;
+}
+
+.pagination-button {
+    display: inline-block;
+}
+
 .pagination-link {
     line-height: 20px;
     text-decoration: none;
@@ -572,4 +642,8 @@ body {
     border-radius: 76px;
     align-items: center;
     padding: 2px 8px;
+}
+
+.pagination-item {
+    margin: 0 8px;
 }
