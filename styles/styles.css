@@ -467,8 +467,6 @@ body {
     background-size: 100%;
     border-radius: 16px;
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
 }
 
 .delivery-slogan {
@@ -492,20 +490,34 @@ body {
     border-radius: 16px;
     margin: 64px;
     margin-left: auto;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    padding: 40px;
 }
 
 .delivery-form-description {
     color: #565C66;
+    margin: 40px 80px 32px 40px;
 }
+
+.delivery-form-data {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
 
 .form-label {
     font-weight: 700;
     font-size: 16px;
-    line-height: 20px
+    line-height: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-label-date {
+    width: 117px;
+}
+
+.form-label-tel {
+    width: 287px;
 }
 
 .address {
