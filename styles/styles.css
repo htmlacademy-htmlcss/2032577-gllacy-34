@@ -500,7 +500,11 @@ body {
 .delivery-form-data {
     display: flex;
     flex-wrap: wrap;
+    margin: 32px 40px; 
+}
 
+.delivery-form-data-item:first-of-type {
+    margin-right: 16px;
 }
 
 
@@ -509,15 +513,26 @@ body {
     font-size: 16px;
     line-height: 20px;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; 
 }
 
 .form-label-date {
     width: 117px;
+    box-sizing: border-box;
+    height: 48px;
+    align-self: center;
 }
 
 .form-label-tel {
     width: 287px;
+    box-sizing: border-box;
+    height: 48px;
+}
+
+.form-label-address {
+    width: 420px;
+    box-sizing: border-box;
+    height: 48px;
 }
 
 .address {
