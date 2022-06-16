@@ -57,15 +57,21 @@
       <section class="catalog-products">
         <h1 class="catalog-products-title">Сливочное мороженное</h1>
         <div class="filtres"> 
+          <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
             <div class="sort-container">         
               <label for="sort" class="catalog-filter-title">Сортировка:</label>
               <select class="select-control" aria-label="Сортировка" id="sort">
-                  <option value="popular">По популярности</option>
-                  <option value="cheap">Сначала дешёвое</option>
-                  <option value="expensive">Сначала дорогое</option>
+                  <option value="popular">по популярности</option>
+                  <option value="cheap">сначала дешёвое</option>
+                  <option value="expensive">сначала дорогое</option>
               </select>
             </div>
-            <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
+            <label class="catalog-filter-price">
+              Цена: 100 ₽ – 500 ₽
+              <span class="catalog-filter-price-container">
+              <input class="catalog-filter-price-range" type="range" min="0" max="1000" step="50" value="100">
+              </span>   
+            </label>           
               <fieldset class="catalog-filter-group">
                     <legend class="catalog-filter-title">Жирность:</legend>
                     <ul class="catalog-filter-list">
@@ -273,7 +279,6 @@
             </li>
         </ul>
         <div class="pagination-container">
-          <span class="empty-block"></span>
           <button class="pagination-button button" type="button">Показать еще</button>
           <ul class="pagination">
               <li class="pagination-item">
