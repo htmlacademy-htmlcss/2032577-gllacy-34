@@ -810,12 +810,14 @@ body {
 .product-card {
     width: 270px;
     background-color: #FCFCFC;
+    background-size: 270px 281px;
     border-radius: 8px;
     margin-right: 30px;
     margin-bottom: 40px;
     padding: 0 40px 24px 40px;
     box-sizing: border-box;
-    text-align: center;    
+    text-align: center; 
+ 
 }
 
 .product-card:nth-child(4n) {
@@ -837,6 +839,7 @@ body {
 
 .product-card-description {
     color: #565C66;
+    margin: 8px auto 16px;
 }
 
 .product-card-price {
@@ -845,8 +848,13 @@ body {
     line-height: 24px;
 }
 
-.empty-block {
-    width: 152px;
+.product-card-title {
+    margin: 0 auto 8px; 
+}
+
+.product-card-price-container {
+    display: flex;
+    justify-content: space-between;
 }
 
 .pagination-container {
