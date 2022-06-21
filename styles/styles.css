@@ -156,7 +156,7 @@ body {
 }
 
 .slider-ice-current .button {
-    margin: 48px auto 138px 70px;
+    margin: 0 auto 138px 70px;
 }
 
 .slider-pages {
@@ -223,6 +223,7 @@ body {
 }
 
 .button {
+    display: inline-block;
     font-weight: 700;
     font-size: 16px;
     line-height: 20px;
@@ -279,7 +280,7 @@ body {
 }
 
 .gifts-items .button {   
-    margin: 28px auto auto 36px;
+    margin: 0 auto auto 36px;
 }
 
 .popular-logo {
@@ -719,7 +720,7 @@ body {
     padding: 8px 16px;  
 }
 
-.filtres .button {   /*почему такая большая кнопка?*/
+.filtres .button {   
     appearance: none;
     font-weight: 700;
     font-size: 14px;
@@ -728,7 +729,7 @@ body {
     background: rgba(252, 252, 252, 0.3);
     border: 2px solid #FCFCFC;
     border-radius: 20px;
-    padding: 8px 52px;
+    padding: 8px 52px;align-self: flex-end;
 }
 
 .sort-container {
