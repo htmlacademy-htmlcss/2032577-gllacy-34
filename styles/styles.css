@@ -301,43 +301,6 @@ body {
     margin-top: 44px;
 }
 
-.popular-item {
-    width: 270px;
-    background-color: #FCFCFC;
-    border-radius: 8px;
-    margin-right: 30px;
-    margin-bottom: 40px;
-    padding: 0 40px 24px 40px;
-    box-sizing: border-box;
-    text-align: center;   
-}
-
-.popular-item:nth-child(4n) {
-    margin-right: 0;
-}
-
-.popular-item-name {
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 24px;
-    text-align: center;
-}
-
-.popular-item-description {
-    text-align: center;
-    color: #565C66;
-}
-
-.popular-item-price {
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 24px;
-}
-
-.popular-item-img {
-    border-radius: 50%;
-}
-
 .advantages {
     background-image: url(../images/background/cone-background.jpg);
     background-size: 100%;
@@ -365,23 +328,24 @@ body {
 
 .advantages-item-description {
     color: #565C66;
+    margin: 0;
 }
 
 .advantages-list {
     list-style-type: none;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: min-content min-content;
+    gap: 40px 32px;
     width: 1042px;
+    padding: 0;
+    margin: 56px 40px;   
 }
 
 .advantages-item {
     width: 505px;
     padding-left: 64px;
     box-sizing: border-box;
-}
-
-.advantages-item:nth-child(2n-1) {
-    margin-right: 32px;
 }
 
 .blog-delivery-container {
@@ -810,14 +774,12 @@ body {
 
 .product-card {
     width: 270px;
-    background-color: #FCFCFC;
-    background-size: 270px 281px;
-    border-radius: 8px;
     margin-right: 30px;
     margin-bottom: 40px;
     padding: 0 40px 24px 40px;
     box-sizing: border-box;
     text-align: center; 
+    position: relative;
  
 }
 
@@ -825,8 +787,22 @@ body {
     margin-right: 0;
 }
 
+.product-card-background {
+    width: 270px;
+    height: 281px;
+    background-color: #FCFCFC;
+    border-radius: 8px;
+    position: absolute;
+    top: 51px;
+    left: 0px;
+    z-index: -1;
+
+}
+
 .product-card-image {
     border-radius: 50%;
+    box-shadow: 0px 4px 12px rgba(45, 52, 64, 0.1);
+    margin-bottom: 16px;
 }
 
 .product-card-link {
@@ -836,6 +812,7 @@ body {
     text-align: center;
     text-decoration: none;
     color: inherit;
+    display: block;
 }
 
 .product-card-description {
