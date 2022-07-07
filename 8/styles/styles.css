@@ -836,6 +836,8 @@ body {
     font-weight: 900;
     font-size: 32px;
     line-height: 46px;
+    margin-bottom: 40px;
+    margin-top: 0;
 }
 
 .filtres {
@@ -851,55 +853,103 @@ body {
 
 .select-control {
     width: 196px;
-    background-color: #FCFCFC;
-    opacity: 0.3;
+    background-color: rgba(252, 252, 252, 0.3);
     border-radius: 20px;
     color: #2D3440;
     padding: 8px 16px;  
+    border: none;
+    height: 36px;
 }
 
 .filtres .button {  
     height: auto; 
-    appearance: none;
     font-weight: 700;
     font-size: 14px;
     line-height: 20px;
     width: 185px;
     background: rgba(252, 252, 252, 0.3);
-    border: 2px solid #FCFCFC;
+    outline: 2px solid #FCFCFC;
     border-radius: 20px;
-    padding: 6px 52px;
+    padding: 8px 52px;
     align-self: flex-end;
-    outline: none;
+    border: none;
 }
 
 .sort-container {
     display: flex;
     flex-direction: column;
-    margin-right: 24px;
 }
 
 .catalog-filter-price {
     display: flex;
     flex-direction: column;
     width: 196px;
-    margin-right: 24px;
+    margin: 0 24px 8px;
+}
+
+.catalog-filter-price-title {
+    margin-left: 16px;
 }
 
 .catalog-filter-price-container {
-    padding: 10px 16px;
-    background: #FCFCFC;
-    opacity: 0.3;
+    padding: 18px 16px;
+    background: rgba(252, 252, 252, 0.3);
     border-radius: 20px;
     margin-top: 8px;
+    height: 36px;
+    box-sizing: border-box;
 }
 
-.catalog-filter-price-range {
-    margin: 0;
-    appearance: none;
-    width: 164px;
+.price-range {
+    position: relative;
+    height: 2px;
+    background-color: rgba(86, 92, 102, 0.3);
 }
 
+.price-range-scale {
+    position: absolute;
+    height: 2px;
+    background-color: #565C66;
+
+}
+
+.price-range-bar {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #FCFCFC;
+    border: 6px solid #2D3440;
+    cursor: pointer;
+    padding: 0;
+}
+
+.bar-min {
+    top: -7px;
+    left: -16px;
+}
+
+.bar-max {
+    left: 56px;
+    top: -7px;
+}
+
+.price-range-bar:hover {  /* не понимаю как почему такая область большая для наведения, именно только у кнопки минимум*/
+    background: #2D3440;
+    border: 6px solid #FCFCFC;
+}
+
+.price-range-bar:focus {
+    background: #2D3440;
+    border: 6px solid #FCFCFC;
+    outline: 2px solid #2D3440;
+}
+
+.price-range-bar:focus {
+    background: #2D3440;
+    border: none;
+    outline: none;
+}
 
 .catalog-filter-group {
     display: flex;
@@ -922,7 +972,7 @@ body {
     display: flex;
     list-style: none;
     max-width: 604px;
-    padding: 9px 24px;
+    padding: 8px 24px;
     background-color: rgba(252, 252, 252, 0.3);
     border-radius: 18px;;
     margin: 0;
@@ -933,11 +983,87 @@ body {
 }
 
 .catalog-filter-title {
-    margin: 8px 0;
+    margin: 0 16px 8px;
+    line-height: 20px;
+}
+
+.control {
+    position: relative;
+    cursor: pointer;
 }
 
 .control-input {
     margin: 0;
+}
+
+.control-label {
+    padding-left: 24px;
+}
+
+.catalog-filter-fat .control-mark {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 1px solid #2D3440;
+    box-sizing: border-box;
+    top: 1px;
+}
+
+.control:hover .control-mark {
+    border-color: #FCFCFC;
+}
+
+.control-input:disabled .control-mark {
+    border-color: rgba(45, 52, 64, 0.5);
+}
+
+.control-input[type="radio"]:checked + .control-mark::after {
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: #2D3440;
+    border-radius: 50%;
+    top: 4px;
+    left: 4px;
+}
+
+.control:hover .control-input[type="radio"]:checked + .control-mark::after {
+    background: #FCFCFC;
+}
+
+.control-input:disabled .control-input[type="radio"]:checked + .control-mark::after {
+    background: rgba(45, 52, 64, 0.5);
+}
+
+.catalog-filter-taste .control-mark {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    box-sizing: border-box;
+    border: 1px solid #2D3440;
+    border-radius: 2px;
+    top: 1px;
+}
+
+.control-mark-check {
+     fill: transparent;
+     position: absolute;
+     top: 1px;
+}
+
+.control-input[type="checkbox"]:checked + .control-mark-check {
+    border: transparent;
+    fill: #2D3440;
+}
+
+.control:hover .control-input[type="checkbox"]:checked + .control-mark-check {
+    fill: #FCFCFC;
+}
+
+.control-input:disabled .control-input[type="checkbox"]:checked + .control-mark-check {
+    fill: rgba(45, 52, 64, 0.5);
 }
 
 .product-list {
@@ -1527,7 +1653,7 @@ body {
     width: 16px;
     height: 16px;
     border: none;
-    background: red;
+    background: transparent;
     margin: 15px 0;
     padding: 0;
     cursor: pointer;
