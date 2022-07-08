@@ -15,9 +15,7 @@
           <li class="navigation-item">
             <a href="catalog.html" class="navigation-link navigation-link-catalog navigation-link-current">Каталог</a>
             <ul class='header-open-menu'>
-              <li class='header-open-menu-item'><a href="#" class='header-open-menu-link header-open-menu-link-main '>Новинки</a></li>
-              <li class='header-open-menu-item-line'>
-              </li>
+              <li class='header-open-menu-item header-open-menu-item-main'><a href="#" class='header-open-menu-link header-open-menu-link-main '>Новинки</a></li>
               <li class='header-open-menu-item'><a href="#" class='header-open-menu-link '>Сливочное</a></li>
               <li class='header-open-menu-item'><a href="#" class='header-open-menu-link'>Щербеты</a></li>
               <li class='header-open-menu-item'><a href="#" class='header-open-menu-link'>Фруктовый лед</a></li>
@@ -47,10 +45,12 @@
             <div class='popover-search-content'>
               <form class="search-form" action="https://echo.htmlacademy.ru/" method="post">
                       <label class="visually-hidden" for="search">Поиск</label>
-                      <input class="search-form-field field" type="text" id="search" name="search" placeholder="Поиск по сайту">
-                      <svg class="search-form-cross" aria-hidden="true" focusable="false width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.8 4.14a.67.67 0 1 0-.94-.94L8 7.06 4.14 3.2a.67.67 0 1 0-.94.94L7.06 8 3.2 11.86a.67.67 0 1 0 .94.94L8 8.94l3.86 3.86a.67.67 0 1 0 .94-.94L8.94 8l3.86-3.86Z" fill="#2D3440" opacity=".4"/>
-                      </svg>
+                      <input class="search-form-field field" type="search" id="search" name="search" placeholder="Поиск по сайту">
+                      <button type="button" class="cross-button">
+                        <svg class="search-form-cross" aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M12.8 4.14a.67.67 0 1 0-.94-.94L8 7.06 4.14 3.2a.67.67 0 1 0-.94.94L7.06 8 3.2 11.86a.67.67 0 1 0 .94.94L8 8.94l3.86 3.86a.67.67 0 1 0 .94-.94L8.94 8l3.86-3.86Z" fill="#2D3440" opacity=".4"/>
+                        </svg>
+                      </button>
               </form>
             </div>
           </li>
@@ -67,7 +67,7 @@
                 <form class="auth-form" action="https://echo.htmlacademy.ru/" method="post">
                   <p class="field-group">
                     <label class="visually-hidden" for="auth-login">Логин</label>
-                    <input class="auth-form-field field" type="text" id="auth-login" name="auth-login" placeholder="Логин" value='email@example.com'>
+                    <input class="auth-form-field field" type="email" id="auth-login" name="auth-login" placeholder="Логин" value='email@example.com'>
                   </p>
                   <p class="field-group">
                     <label class="visually-hidden" for="auth-password">Пароль</label>
@@ -95,7 +95,7 @@
                   <h2 class='popover-title'>Корзина</h2>
                   <ul class='popover-basket-list'>
                     <li class='popover-basket-item'>
-                      <image class='popover-basket-item-image' src='images/catalog/catalog-item-1.jpg' width='46' height='46' alt='Мороженное'>
+                      <img class='popover-basket-item-image' src='images/catalog/catalog-item-1.jpg' width='46' height='46' alt='Мороженное'>
                         <div class='popover-basket-item-name-and-price'>
                           <p class='popover-basket-item-name'>Малинка</p>
                           <p class='popover-basket-item-price-and-mass'>1 кг х 310 ₽</p>
@@ -109,7 +109,7 @@
                         </button>
                     </li>
                     <li class='popover-basket-item'>
-                      <image class='popover-basket-item-image' src='images/catalog/catalog-item-4.jpg' width='46' height='46' alt='Мороженное'>
+                      <img class='popover-basket-item-image' src='images/catalog/catalog-item-4.jpg' width='46' height='46' alt='Мороженное'>
                         <div class='popover-basket-item-name-and-price'>
                          <p class='popover-basket-item-name'>Бабл-гам</p>
                          <p class='popover-basket-item-price-and-mass'>1,5 кг х 320 ₽</p>
@@ -163,16 +163,16 @@
             <label class="catalog-filter-price">
               <span class="catalog-filter-price-title">Цена: 100 ₽ – 500 ₽</span>  
               <span class="catalog-filter-price-container">
-                <div class="price-range">
-                  <div class="price-range-scale" style='width: 56px; left:40px'>
-                    <button class="price-range-bar bar-min">
+                <span class="price-range">
+                  <span class="price-range-scale" style='width: 56px; left:40px'>
+                    <button type="button" class="price-range-bar bar-min">
                       <span class="visually-hidden">Изменить минимальную цену</span>
                     </button>
-                    <button class="price-range-bar bar-max">
+                    <button type="button" class="price-range-bar bar-max">
                       <span class="visually-hidden">Изменить максимальную цену</span>
                     </button>
-                  </div>
-                </div>
+                  </span>
+                </span>
               </span>   
             </label>           
               <fieldset class="catalog-filter-group">
@@ -490,7 +490,7 @@
                   <span class="visually-hidden">Предыдущая страница</span>
                 </a>
               </li>
-              <div class="pagination-digit">
+              <ul class="pagination-digit">
                 <li class="pagination-item">
                   <a href="#" class="pagination-link">1</a>
                 </li>
@@ -506,7 +506,7 @@
                 <li class="pagination-item">
                   <a href="#" class="pagination-link">5</a>
                 </li>
-              </div> 
+              </ul> 
               <li class="pagination-item pagination-item-arrow">
                 <a href="#" class="pagination-link">
                   <svg class="pagination-arrow-icon pagination-arrow-icon-next" aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
@@ -521,7 +521,7 @@
     </div>
     </main>
     <footer class="page-footer">
-      <div class="page-footer-container">
+      <div class="page-footer-container page-footer-container-catalog">
         <section class="page-footer-social">
           <h2 class="visually-hidden">Социальные сети</h2>
           <ul class="page-footer-social-list">
