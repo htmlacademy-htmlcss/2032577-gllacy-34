@@ -49,10 +49,9 @@ body {
     overflow: hidden;
 }
 
-.page-container section:not(.address) {
+.page-container section:not(:last-child) {
     margin-bottom: 80px;
 }
-
 
 .navigation {
     display: flex;
@@ -79,6 +78,7 @@ body {
 .navigation-logo {
     width: 137px;
     margin-right: 16px;
+    height: 56px;
 }
 
 .navigation-item {
@@ -133,6 +133,8 @@ body {
 .navigation-user .navigation-link-enter {
     padding-left: 38px;
     padding-right: 16px;
+    font-size: 14px;
+    line-height: 20px;
 }
 
 .navigation-item .navigation-link-search {
@@ -148,6 +150,9 @@ body {
 .navigation-user .navigation-link-basket {
     padding-left: 38px;
     padding-right: 16px;
+    width: 115px;
+    font-size: 14px;
+    line-height: 20px;
 }
 
 .navigation-link-basket .navigation-item-icon {
@@ -191,7 +196,7 @@ body {
     padding: 0;
     display: flex;
     align-content: center;
-    margin-bottom: 0;
+    margin-bottom: 2px;
     margin-top: 0;
 }
 
@@ -215,7 +220,7 @@ body {
 }
 
 .slider-ice-current .button {
-    margin: 0 auto 138px 70px;
+    margin: 0 auto 124px 70px;
 }
 
 .slider-pages {
@@ -225,6 +230,7 @@ body {
     margin-top: 0;
     margin-right: auto;
     margin-bottom: 0;
+    line-height: 0;
 }
 
 .slider-pages-button {
@@ -252,7 +258,6 @@ body {
     margin-top: 21px;
     display: flex;
     justify-content: center;
-    align-items: center;
     position: relative;
 }
 
@@ -272,7 +277,6 @@ body {
 
 .slider-ice-next {
     width: 100px;
-    opacity: 0.4;
     margin-top: 204px;
     position: relative;
 }
@@ -288,7 +292,7 @@ body {
     height: 100px;
     border-radius: 50%;
     background-color: #FFCBD8;
-    opacity: 1;
+    opacity: 0.4;
     z-index: -1;
     left: 0;
     top: 25px;
@@ -300,6 +304,7 @@ body {
     margin-left: auto;
     margin-bottom: 0;
     margin-top: 0;
+    line-height: 0;
 }
 
 .social-items {        
@@ -441,7 +446,7 @@ body {
     list-style: none;
     align-items: center;
     padding: 0;
-    margin-top: 44px;
+    margin-top: 56px;
 }
 
 .advantages {
@@ -515,7 +520,7 @@ body {
     color: #565C66;
     font-weight: 400;
     font-size: 16px;
-    margin: 32px auto 12px 32px;
+    margin: 33px auto 12px 32px;
 }
 
 .blog-title {
@@ -535,6 +540,7 @@ body {
     border-radius: 16px;
     width: 570px;
     min-height: 224px;
+    margin-bottom: 80px;
 }
 
 .subscription-inner {
@@ -613,9 +619,8 @@ body {
     width: 500px;
     min-height: 406px;
     background-color: #FCFCFC;
-    border-radius: 16px;
+    border-radius: 8px;
     margin: 64px;
-    margin-bottom: 56px;
     margin-left: auto;
 }
 
@@ -627,11 +632,11 @@ body {
 .delivery-form-data {
     display: flex;
     flex-wrap: wrap;
-    margin: 32px 40px 42px 32px; 
+    margin: 0 40px 42px 40px; 
 }
 
 .delivery-form-data-item {
-    margin: 0 auto;
+    margin: 0;
 }
 
 .delivery-form-data-item:first-of-type {
@@ -648,17 +653,24 @@ body {
     flex-direction: column; 
 }
 
-.form-label-item{
+.form-label-item {
     box-sizing: border-box;
     height: 48px;
     align-self: center;
     padding: 14px 16px;
     font-size: 16px;
     line-height: 20px;
-    color: #B9B9B9;
     margin-top: 8px;
     border: 1px solid #B9B9B9;
     border-radius: 4px;
+}
+
+.form-label-item::placeholder {
+    font-family: Inter, sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+    color: #B9B9B9;
+    align-self: flex-end;
 }
 
 .form-label-date {
@@ -675,6 +687,7 @@ body {
 
 .delivery-form-data button {
     margin: 32px auto 0 auto;
+    width: 152px;
 }
 
 .address {
@@ -683,13 +696,14 @@ body {
     background-image: url(../images/background/feedback-background.jpg);
     background-size: auto;
     border-radius: 16px;  
+    margin-bottom: 0;
 }
 
 .address-inner {
     width: 343px;
     min-height: 364px;
     background-color: #FCFCFC;
-    border-radius: 16px;
+    border-radius: 8px;
     display: inline-block;
     margin: 64px;
     margin-bottom: 56px;
@@ -738,6 +752,10 @@ body {
     margin-bottom: 32px;
 }
 
+.address-info .button {
+    width: 250px;
+}
+
 .address-inner .button-submit-inner {
     width: 186px;
 }
@@ -756,13 +774,14 @@ body {
 .page-footer-container {
     display: flex;
     width: 1170px;
-    margin: 48px auto;
+    margin: 44px auto;
     position: relative;
 
 }
 
 .page-footer-social {
-    margin-right: 299px;
+    margin-right: 323px;
+    margin-left: 4px;
 }
 
 .page-footer-social-list {
@@ -781,18 +800,20 @@ body {
     width: 356px;
     padding: 0;
     position: relative;
+    margin: 0;
+    gap: 8px 0;
+    line-height: 20px;
 }
 
 .page-footer-menu-list a {
     font-size: 14px;
-    line-height: 20px;
     text-decoration: none;
     color: inherit;
 }
 
 .page-footer-menu-item-main {
     font-weight: 700;
-    position: relative;
+    position: relative;    
 }
 
 .page-footer-menu-item-main::before {
@@ -801,31 +822,43 @@ body {
     position: absolute;
     width: 16px;
     height: 16px;
-    left: -25px;
-    top: 4px;
+    left: -23px;
+    top: 3px;
+    line-height: 20px;
 }
 
 .page-footer-htmlacademy {
     margin-left: auto;
+    margin-right: 14px;
 }
 
 .page-footer-htmlacademy-text {
     font-size: 12px;
     line-height: 16px;
+    margin-top: 14px;
 }
 
 .page-footer-htmlacademy-text-link {
     color: inherit;
 }
 
+.page-footer-htmlacademy-logo {
+    display: block;
+    line-height: 0;
+}
+
 .breadcrumbs {
     list-style: none;
     display: flex;
     padding: 0;
+    margin-top: 32px;
+    line-height: 0;
 }
 
 .breadcrumbs-item {
-    margin-right: 0px;
+    margin-right: 28px;
+    line-height: 20px;
+    position: relative;
 }
 
 .breadcrumbs-link {
@@ -837,8 +870,10 @@ body {
 }
 
 .breadcrumbs-link-icon {
-    margin: 0 8px;
-    padding: 0 2.5px;
+    position: absolute;
+    top: 4px;
+    left: 66px;
+
 }
 
 .breadcrumbs-current {
@@ -846,6 +881,10 @@ body {
     font-size: 14px;
     line-height: 20px;
     border-bottom: 1px solid #2D3440;
+}
+
+.catalog-products {
+    margin-bottom: 40px;
 }
 
 .catalog-products-title {
@@ -866,6 +905,14 @@ body {
     flex-wrap: wrap;
 }
 
+.catalog-filter-group .catalog-filter-taste {
+    padding: 10px 24px;
+    width: 604px;
+    justify-content: space-between;
+    box-sizing: border-box;
+    margin-right: 2px;
+}
+
 
 .select-control {
     width: 196px;
@@ -875,6 +922,17 @@ body {
     padding: 8px 16px;  
     border: none;
     height: 36px;
+    font-family: 'Inter';
+    font-size: 14px;
+    appearance: none;
+    background-image: url(/images/arrow-down.svg);
+    background-repeat: no-repeat;
+    background-position: 167px 10px;
+    cursor: pointer;
+}
+
+.select-control option {
+    padding: 0;
 }
 
 .filtres .button {  
@@ -889,6 +947,11 @@ body {
     padding: 8px 52px;
     align-self: flex-end;
     border: none;
+    margin-bottom: 2px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
 }
 
 .sort-container {
@@ -975,6 +1038,7 @@ body {
     max-width: 604px;
     border: none;
     margin-right: 16px;
+    margin-left: 0;
 }
 
 .catalog-filter-group:first-of-type {
@@ -1001,6 +1065,7 @@ body {
 .catalog-filter-title {
     margin: 0 16px 8px;
     line-height: 20px;
+    padding: 0;
 }
 
 .control {
@@ -1014,6 +1079,13 @@ body {
 
 .control-label {
     padding-left: 24px;
+    font-family: 'Inter', sans-serif;
+}
+
+.catalog-filter-fat {
+    width: 383px;
+    justify-content: space-between;
+    box-sizing: border-box;
 }
 
 .catalog-filter-fat .control-mark {
@@ -1124,26 +1196,30 @@ body {
 .product-card-link {
     font-weight: 700;
     font-size: 20px;
-    line-height: 24px;
     text-align: center;
     text-decoration: none;
     color: inherit;
-    display: block0;
+    display: block;
+    line-height: 0px;
 }
 
 .product-card-description {
     color: #565C66;
-    margin: 8px auto 16px;
+    margin: 0 auto 16px;
 }
 
 .product-card-price {
     font-weight: 700;
     font-size: 20px;
     line-height: 24px;
+    align-self: center;
 }
 
 .product-card-title {
     margin: 0 auto 8px; 
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
 }
 
 .product-card-price-container {
@@ -1174,7 +1250,7 @@ body {
 .pagination-container {
     display: flex;
     justify-content: space-between;
-    padding: 41px 0px;
+    padding: 41px 0px 45px;
 }
 
 .pagination {
@@ -1184,12 +1260,19 @@ body {
     box-sizing: border-box;
     margin: 0;
     align-items: center;
+    padding: 0;
 }
 
 .pagination-container .button {
     border: none;
     margin-left: auto;
     margin-right: 335px;
+    width: 179px;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
 }
 
 .pagination-item {
