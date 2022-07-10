@@ -521,6 +521,7 @@ body {
     border-radius: 16px;
     background-image: url(../images/background/blog-background.jpg);
     background-size: auto;
+    background-color: #ffffff;
 }
 
 .blog-slogan {
@@ -604,6 +605,7 @@ body {
     width: 1170px;
     min-height: 534px;
     background-image: url(../images/background/delivery-background.jpg);
+    background-color: #ffffff;
     background-size: 100%;
     border-radius: 16px;
     display: flex;
@@ -704,6 +706,7 @@ body {
     width: 1170px;
     min-height: 492px;
     background-image: url(../images/background/feedback-background.jpg);
+    background-color: #ffffff;
     background-size: auto;
     border-radius: 16px;
     margin-bottom: 0;
