@@ -593,7 +593,28 @@ body {
     font-weight: 400;
     font-size: 16px;
     line-height: 20px;
+    outline: none;
 }
+
+.subscription-form .field:invalid {
+    border: 1px solid #EA5454;
+}
+
+.subscription-form .field:invalid:hover {
+    border: 2px solid #EA5454;
+    padding: 13px 15px;
+    outline: none;
+}
+
+.subscription-form .field:disabled:hover {
+    background: #E7E7E7;
+}
+
+.subscription-form .field:disabled {
+    color: rgba(45, 52, 64, 0.65);
+    background: #E7E7E7;
+}
+
 
 .subscription-button {
     max-width: 160px;
@@ -701,6 +722,26 @@ body {
     line-height: 20px;
     color: #B9B9B9;
     align-self: flex-end;
+}
+
+.form-label-item:invalid {
+    border: 1px solid #EA5454;
+}
+
+.form-label-item:invalid:hover {
+    border: 2px solid #EA5454;
+    padding: 13px 15px;
+    outline: none;
+}
+
+.form-label-item:disabled {
+    color: rgba(45, 52, 64, 0.65);
+    background: #E7E7E7;
+}
+
+
+.form-label-item:disabled:hover {
+    background: #E7E7E7;
 }
 
 .form-label-date {
