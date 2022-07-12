@@ -1,5 +1,5 @@
 @font-face {
-    font-family: "Inter";
+    font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
     src: url(../fonts/inter-400.woff2);
@@ -7,7 +7,7 @@
 }
 
 @font-face {
-    font-family: "Inter";
+    font-family: 'Inter';
     font-style: normal;
     font-weight: 700;
     src: url(../fonts/inter-700.woff2);
@@ -15,7 +15,7 @@
 }
 
 @font-face {
-    font-family: "Inter";
+    font-family: 'Inter';
     font-style: normal;
     font-weight: 900;
     src: url(../fonts/inter-900.woff2);
@@ -588,7 +588,7 @@ body {
     border: 1px solid #B9B9B9;
     border-radius: 4px;
     color: #B9B9B9;
-    font-family: 'Inter';
+    font-family: Inter, sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -596,11 +596,11 @@ body {
     outline: none;
 }
 
-.subscription-form .field:invalid {
+.subscription-form .field:invalid:focus {
     border: 1px solid #EA5454;
 }
 
-.subscription-form .field:invalid:hover {
+.subscription-form .field:invalid:focus:hover {
     border: 2px solid #EA5454;
     padding: 13px 15px;
     outline: none;
@@ -672,6 +672,7 @@ body {
     margin: 64px;
     margin-left: auto;
     max-height: fit-content;
+    box-shadow: 0px 15px 40px rgba(45, 52, 64, 0.12);
 }
 
 .delivery-form-description {
@@ -724,11 +725,11 @@ body {
     align-self: flex-end;
 }
 
-.form-label-item:invalid {
+.form-label-item:invalid:focus {
     border: 1px solid #EA5454;
 }
 
-.form-label-item:invalid:hover {
+.form-label-item:invalid:focus:hover {
     border: 2px solid #EA5454;
     padding: 13px 15px;
     outline: none;
@@ -895,7 +896,7 @@ body {
 }
 
 .page-footer-menu-item-main::before {
-    content: "";
+    content: '';
     background-image: url(../images/heart-icon.svg);
     position: absolute;
     width: 16px;
@@ -941,7 +942,6 @@ body {
 }
 
 .breadcrumbs-item {
-    margin-right: 28px;
     line-height: 20px;
     position: relative;
 }
@@ -952,6 +952,10 @@ body {
     line-height: 20px;
     text-decoration: none;
     color: inherit;
+}
+
+.breadcrumbs-link-icon {
+    margin: 0 8px 0 4px;
 }
 
 
@@ -987,7 +991,6 @@ body {
 .catalog-filter-group .catalog-filter-taste {
     padding: 10px 24px;
     width: 604px;
-    justify-content: space-between;
     box-sizing: border-box;
     margin-right: 2px;
 }
@@ -1000,7 +1003,7 @@ body {
     padding: 8px 16px;
     border: none;
     height: 36px;
-    font-family: 'Inter';
+    font-family: Inter, sans-serif;
     font-size: 14px;
     appearance: none;
     background-image: url(/images/arrow-down.svg);
@@ -1038,7 +1041,7 @@ body {
     align-self: flex-end;
     border: none;
     margin-bottom: 2px;
-    font-family: 'Inter', sans-serif;
+    font-family: Inter, sans-serif;
     font-weight: 700;
     font-size: 14px;
     line-height: 20px;
@@ -1146,10 +1149,11 @@ body {
     background-color: rgba(252, 252, 252, 0.3);
     border-radius: 18px;
     margin: 0;
+    flex-wrap: wrap;
 }
 
 .catalog-filter-item:not(:last-child) {
-    margin-right: 16px;
+    margin-right: 16.5px;
 }
 
 .catalog-filter-title {
@@ -1170,12 +1174,11 @@ body {
 
 .control-label {
     padding-left: 24px;
-    font-family: 'Inter', sans-serif;
+    font-family: Inter, sans-serif;
 }
 
 .catalog-filter-fat {
     min-width: 383px;
-    justify-content: space-between;
     box-sizing: border-box;
 }
 
@@ -1193,12 +1196,20 @@ body {
     border-color: #FCFCFC;
 }
 
+.control-input:focus + .control-mark {
+    border-color: #FCFCFC;
+}
+
+.control-input[type='radio']:checked:focus + .control-mark::after {
+    background: #FCFCFC;
+}
+
 .control-input:disabled .control-mark {
     border-color: rgba(45, 52, 64, 0.5);
 }
 
-.control-input[type="radio"]:checked + .control-mark::after {
-    content: "";
+.control-input[type='radio']:checked + .control-mark::after {
+    content: '';
     position: absolute;
     width: 6px;
     height: 6px;
@@ -1208,11 +1219,15 @@ body {
     left: 4px;
 }
 
-.control:hover .control-input[type="radio"]:checked + .control-mark::after {
+.control:hover .control-input[type='radio']:checked + .control-mark::after {
     background: #FCFCFC;
 }
 
-.control-input:disabled .control-input[type="radio"]:checked + .control-mark::after {
+.control:focus .control-input[type='radio']:checked + .control-mark::after {
+    background: #FCFCFC;
+}
+
+.control-input:disabled .control-input[type='radio']:checked + .control-mark::after {
     background: rgba(45, 52, 64, 0.5);
 }
 
@@ -1232,16 +1247,20 @@ body {
     top: 1px;
 }
 
-.control-input[type="checkbox"]:checked + .control-mark-check {
+.control-input[type='checkbox']:checked + .control-mark-check {
     border: transparent;
     fill: #2D3440;
 }
 
-.control:hover .control-input[type="checkbox"]:checked + .control-mark-check {
+.control:hover .control-input[type='checkbox']:checked + .control-mark-check {
     fill: #FCFCFC;
 }
 
-.control-input:disabled .control-input[type="checkbox"]:checked + .control-mark-check {
+.control-input[type='checkbox']:checked:focus + .control-mark-check {
+    fill: #FCFCFC;
+}
+
+.control-input:disabled .control-input[type='checkbox']:checked + .control-mark-check {
     fill: rgba(45, 52, 64, 0.5);
 }
 
@@ -1250,7 +1269,7 @@ body {
     grid-template-columns: repeat(4, 1fr);
     gap: 40px 30px;
     list-style: none;
-    align-items: center;
+    align-items: flex-start;
     padding: 0;
     margin-top: 44px;
     margin-bottom: 16px;
@@ -1268,7 +1287,7 @@ body {
 .product-card::after {
     content: '';
     width: 270px;
-    height: 281px;
+    height: calc(100% - 51px);
     background-color: #FCFCFC;
     border-radius: 8px;
     position: absolute;
@@ -1359,7 +1378,7 @@ body {
     margin-left: 487px;
     margin-right: auto;
     width: 179px;
-    font-family: 'Inter', sans-serif;
+    font-family: Inter, sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
@@ -1471,7 +1490,7 @@ body {
 }
 
 .modal-title {
-    font-family: 'Inter', sans-serif;
+    font-family: Inter, sans-serif;
     font-weight: 700;
     font-size: 24px;
     line-height: 30px;
@@ -1505,7 +1524,7 @@ body {
     box-shadow: 0px 4px 12px rgba(45, 52, 64, 0.1);
     border-radius: 26px;
     padding: 12px 32px;
-    font-family: 'Inter', sans-serif;
+    font-family: Inter, sans-serif;
     font-weight: 700;
     font-size: 16px;
     line-height: 20px;
@@ -1527,11 +1546,11 @@ body {
     outline: 1px solid #2D3440;
 }
 
-.field:invalid {
+.field:invalid:focus {
     outline: 1px solid #EA5454;
 }
 
-.field:hover:invalid {
+.field:hover:invalid:focus {
     outline: 2px solid #EA5454;
 }
 
@@ -1678,7 +1697,7 @@ body {
 }
 
 .popover-title {
-    font-family: 'Inter', sans-serif;
+    font-family: Inter, sans-serif;
     font-weight: 700;
     font-size: 24px;
     line-height: 30px;
@@ -1694,7 +1713,7 @@ body {
 .field {
     width: 324px;
     height: 48px;
-    font-family: 'Inter', sans-serif;
+    font-family: Inter, sans-serif;
     font-weight: 400;
     font-size: 16px;
     line-height: 20px;
@@ -1715,7 +1734,7 @@ body {
     box-shadow: 0px 4px 12px rgba(45, 52, 64, 0.1);
     border-radius: 26px;
     padding: 12px 32px;
-    font-family: 'Inter', sans-serif;
+    font-family: Inter, sans-serif;
     font-weight: 700;
     font-size: 16px;
     line-height: 20px;
@@ -1737,7 +1756,7 @@ body {
 }
 
 .auth-form-link-container a {
-    font-family: 'Inter', sans-serif;
+    font-family: Inter, sans-serif;
     font-weight: 400;
     font-size: 14px;
     line-height: 20px;
@@ -1770,7 +1789,7 @@ body {
 }
 
 .popover-title {
-    font-family: 'Inter', sans-serif;
+    font-family: Inter, sans-serif;
     font-weight: 700;
     font-size: 24px;
     line-height: 30px;
@@ -1799,7 +1818,7 @@ body {
 }
 
 .popover-basket-item-name {
-    font-family: 'Inter', sans-serif;
+    font-family: Inter, sans-serif;
     font-weight: 700;
     font-size: 18px;
     line-height: 22px;
@@ -1809,7 +1828,7 @@ body {
 }
 
 .popover-basket-item-price-and-mass {
-    font-family: 'Inter', sans-serif;
+    font-family: Inter, sans-serif;
     font-weight: 400;
     font-size: 14px;
     line-height: 20px;
@@ -1818,7 +1837,7 @@ body {
 }
 
 .popover-basket-item-price {
-    font-family: 'Inter', sans-serif;
+    font-family: Inter, sans-serif;
     font-weight: 700;
     font-size: 18px;
     line-height: 22px;
@@ -1847,7 +1866,7 @@ body {
 }
 
 .popover-basket-total {
-    font-family: 'Inter', sans-serif;
+    font-family: Inter, sans-serif;
     font-weight: 700;
     font-size: 18px;
     line-height: 22px;
